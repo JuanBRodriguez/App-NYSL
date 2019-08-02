@@ -33,7 +33,7 @@
   <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
 
   <!-- css -->
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/nysl.css">
 
   <!-- icon -->
@@ -45,8 +45,6 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- css   -->
-  <link rel="stylesheet" href="styles/main.css">
 
   <!-- update the version number as needed -->
   <script defer src="/__/firebase/6.3.4/firebase-app.js"></script>
@@ -61,14 +59,6 @@
 </head>
 
 <body>
-  <!-- Splash screen -->
-  <section id="page-splash">
-    <h3 class="logo">Database Web Quickstart</h3>
-    <div>
-      <button id="sign-in-button" class="mdl-button--raised mdl-button mdl-js-button mdl-js-ripple-effect"><i
-          class="material-icons">account_circle</i> Sign in with Google</button>
-    </div>
-  </section>
 
   <!-- Header section containing logo and menu -->
   <header class="header mdl-layout__header mdl-color-text--white mdl-color--light-blue-700">
@@ -103,7 +93,7 @@
   <main class="">
 
     <!-- Show the add post form -->
-    <section class="mdl-grid content" id="add-post" >
+    <section class="mdl-grid content" id="add-post">
       <div class="mdl-cell mdl-cell--12-col mdl-grid">
 
         <!-- Card containing the inputs to add a new messages -->
@@ -132,13 +122,13 @@
     </section>
 
     <!-- Show a list of recent posts -->
-    <section class="mdl-grid content" id="recent-posts-list" >
+    <section class="mdl-grid content" id="recent-posts-list">
       <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
       </div>
     </section>
 
     <!-- Show the list of user's posts -->
-    <section class="mdl-grid content" id="user-posts-list" >
+    <section class="mdl-grid content" id="user-posts-list">
       <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
       </div>
     </section>
@@ -154,16 +144,15 @@
 
     <!--Navegador  -->
     <nav class="navbar navbar-expand-lg navbar-light bg-success border border-dark mb-2">
-      <div>
-        <button id="sign-in-button" class="mdl-button--raised mdl-button mdl-js-button mdl-js-ripple-effect"><i
-            class="material-icons">account_circle</i> Sign in with Google</button>
-      </div>
       <a class="navbar-brand m-0" href="#">
         <img src="img/nysl_logo.png" width="60" height="60" alt="logo NYSL">
+        <div class="d-md-none">
+          <h5><em>NYSL</em></h5>
+        </div>
       </a>
-      <div class="d-md-none">
-        <h5><em>NYSL</em></h5>
-      </div>
+      <button id="sign-in-button" class="btn btn-success">
+        <i class="material-icons">account_circle</i>Sign in
+      </button>
       <button class="navbar-toggler btn btn-success border border-dark" type="button" data-toggle="collapse"
         data-target="#dropnav" aria-controls="dropnav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
