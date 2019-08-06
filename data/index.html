@@ -3,93 +3,45 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="author" content="Juan Rodriguez" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="The NYSL app" />
-  <title>Northside Youth Soccer League</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Disable tap highlight on IE -->
-  <meta name="msapplication-tap-highlight" content="no">
-
-  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="description" content="The NYSL Rules" />
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="application-name" content="Northside Youth Soccer League">
-  <meta name="theme-color" content="#303F9F">
-
-  <!-- Add to homescreen for Safari on iOS -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Northside Youth Soccer League">
-  <meta name="apple-mobile-web-app-status-bar-style" content="#303F9F">
-
-  <!-- Tile icon for Win8 -->
-  <meta name="msapplication-TileColor" content="#3372DF">
-  <meta name="msapplication-navbutton-color" content="#303F9F">
-
-  <!-- Material Design Lite -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue_grey-orange.min.css">
-  <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
-
-  <!-- css -->
-  <link rel="stylesheet" href="styles/nysl.css">
-
-  <!-- icon -->
+  <title>Northside Youth Soccer League</title>
   <link rel="shortcut icon" href="img/iconfinder_soccer_63158.png">
-
+  <link rel="stylesheet" href="styles/nysl.css">
   <!-- JQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- update the version number as needed -->
-  <script defer src="/__/firebase/6.3.4/firebase-app.js"></script>
-  <!-- include only the Firebase features as you need -->
-  <script defer src="/__/firebase/6.3.4/firebase-auth.js"></script>
-  <script defer src="/__/firebase/6.3.4/firebase-database.js"></script>
-  <script defer src="/__/firebase/6.3.4/firebase-messaging.js"></script>
-  <script defer src="/__/firebase/6.3.4/firebase-storage.js"></script>
-  <!-- initialize the SDK after all desired features are loaded -->
-  <script defer src="/__/firebase/init.js"></script>
-
+  <!-- Material Design Lite -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue_grey-orange.min.css">
+  <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
 </head>
 
 <body>
   <!-- contenido -->
   <div class="" id="page">
-
     <!--Navegador  -->
     <nav class="navbar navbar-expand-lg navbar-light bg-success border border-dark mb-2">
-      <a class="navbar-brand m-0" href="#">
-        <img src="img/nysl_logo.png" width="60" height="60" alt="logo NYSL">
-        <div class="d-md-none">
-          <h5><em>NYSL</em></h5>
-        </div>
-      </a>
 
-      <!-- <button id="sign-in-button" class="btn btn-success">
-        <i class="material-icons">account_circle</i>Sign in
+      <button type="button" class="btn btn-success " id="logeo">
+        <img src="img/person.svg" width="40" height="40" alt="user" class="icon" id="fotoUs">
       </button>
 
-      <button id="sign-out-button" class="mdl-button--raised mdl-button mdl-js-button mdl-js-ripple-effect">
-        <i class="material-icons">account_circle</i> Sign out
-      </button>
-      <button class="mdl-button mdl-js-button mdl-button--fab mdl-color--amber-400 mdl-shadow--4dp mdl-js-ripple-effect"
-        id="add">
-        <i class="material-icons">mode_edit</i>
-      </button> -->
+      <div class="d-md-none">
+        <h5><em>NYSL</em></h5>
+      </div>
 
       <button class="navbar-toggler btn btn-success border border-dark" type="button" data-toggle="collapse"
-        data-target="#dropnav" aria-controls="dropnav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        data-target="#drop-nav" aria-controls="drop-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class=""><img src="img/nysl_logo.png" width="40" height="40" alt="logo NYSL"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="dropnav">
+      <div class="collapse navbar-collapse" id="drop-nav">
         <div class="navbar-nav text-center">
-
           <a class="nav-item nav-link find-nav-hom" href="#">
             <button class="btn btn-success" type="button">Home </button>
           </a>
@@ -105,19 +57,36 @@
           <a class="nav-item nav-link find-nav-con" href="#">
             <button class="btn btn-success" type="button">Contact </button>
           </a>
-
         </div>
       </div>
-
-
     </nav>
-
     <!-- sign in -->
-    <div class="">
-      <input id="email" type="email" name="" id="" placeholder="ingrese email">
-      <input id="contra" type="password" name="" id="" placeholder="ingrese contraseña">
-      <button type="submit" onclick="registrar()"> Create Account</button>
-      <button type="submit" onclick="acceder()"> Sign In</button>
+    <div class="collapse container-fluid" id="sign">
+
+      <div class="noLogueado" id="ingreso">
+
+        <form action="" class="noVisible">
+          <input id="email" type="email" name="" class="form-control" placeholder="ingrese email">
+          <input id="contra" type="password" name="" class="form-control" placeholder="ingrese contraseña">
+
+          <button class="btn btn-success btn-block mb-2" type="submit" onclick="acceder()">
+            Sign In
+          </button>
+          <button class="btn btn-success btn-block mb-2" type="submit" onclick="regis()">
+            Registrar
+          </button>
+        </form>
+
+        <button class="btn btn-success btn-block mb-2" type="button" onclick="registrar()">
+          Sign In with google
+        </button>
+      </div>
+      <!-- solo si esta logueado -->
+      <div class="logueado ">
+        <button class="btn btn-success btn-block mb-2" type="button" onclick="salir()">
+          Sign out
+        </button>
+      </div>
     </div>
 
     <!-- Home -->
@@ -622,6 +591,58 @@
       </div>
       <!-- informacion adicional -->
       <div class="">
+        <div class="noVisible">
+          <button
+            class=" mdl-button mdl-js-button mdl-button--fab mdl-color--amber-400 mdl-shadow--4dp mdl-js-ripple-effect"
+            id="add">
+            <i class="material-icons">mode_edit</i>
+          </button>
+        </div>
+
+        <div class="" id="">
+          <div class="card bg-success text-center">
+              <button class="btn btn-block btn-success btn-lg" type="button" data-toggle="collapse" data-target="#post-games"
+                aria-expanded="true" aria-controls="post-games"> publications about the game
+              </button>
+
+            <div id="post-games" class="collapse">
+              <div class="logueado">
+                <!-- Card containing the inputs to add a new messages -->
+                <div class="container-fluid text-center ">
+                  <div class=" container-fluid card bg-success">
+                    <h2 class="">New Post</h2>
+                    <form id="message-form" action="#">
+                      <div class="form-group">
+                        <label class="" for="new-post-title">Post title...</label>
+                        <input class="form-control" type="text" id="new-post-title">
+                      </div>
+                      <div class="form-group">
+                        <label class="" for="new-post-message">Post message...</label>
+                        <textarea class="form-control" rows="3" id="new-post-message"></textarea>
+                      </div>
+                      <button type="submit" class="btn btn-success btn-block mt-2 mb-2 border border-dark">
+                        Add post
+                      </button>
+                    </form>
+                  </div>
+                </div>
+
+                <!-- Show a list of recent posts -->
+                <section class="content" id="recent-posts-list">
+                  <div class="posts">
+                    aaaaaaaaaaaaaaaaaaaa
+                  </div>
+                </section>
+              </div>
+              <div class="noLogueado">
+                <h6>log in with google to see the game posts</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
         <p class="announcement"><br>*All games take place on Saturday</p>
         <p><strong>Facility Type:</strong> Outdoor</p>
         <p><strong>Additional Information:</strong> If deemed necessary by NYSL, games may be shortened or cancelled
@@ -880,11 +901,7 @@
     </p>
   </footer>
 
-  <!-- --------------------------------SCRIPTS------------------------------------- -->
-  <!-- VUE development version, includes helpful console warnings -->
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
-
+  <!-- ************************ SCRIPTS ********************************-->
 
   <!-- default script -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -898,6 +915,33 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-database.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCPXh_6nU8MVuAP7KqUIZ1MDq1FlxKsir0",
+      authDomain: "nysl-111.firebaseapp.com",
+      databaseURL: "https://nysl-111.firebaseio.com",
+      projectId: "nysl-111",
+      storageBucket: "",
+      messagingSenderId: "263651965258",
+      appId: "1:263651965258:web:9d0faa44e5459e9b"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <!-- Scrips personales -->
+  <script src="scripts/app.js"></script>
+  <script src="scripts/main.js"></script>
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -918,10 +962,6 @@
       }
     });
   </script>
-
-  <!-- Scrips personales -->
-  <script src="scripts/main.js"></script>
-  <!-- <script src="scripts/main2.js"></script> -->
 </body>
 
 </html>

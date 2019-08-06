@@ -3,6 +3,11 @@
     "rules": "database.rules.json"
   },
   "hosting": {
-    "public": "task4"
+    "public": "data",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
   }
 }

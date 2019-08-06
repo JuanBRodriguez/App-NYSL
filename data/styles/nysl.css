@@ -1,0 +1,19 @@
+body {
+  background: url(../img/Césped-Deportivo.jpg);
+  background-size: contain;
+  padding-bottom: 35px;
+}
+
+@media all and (orientation: portrait) {}
+@media all and (orientation: landscape) {}
+
+.material-icons.md-36 {
+  font-size: 36px;
+}
+
+.noVisible{
+  display: none;
+}
+.visible{
+  display: block;
+}
