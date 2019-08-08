@@ -12,8 +12,10 @@ var nav = $("#drop-nav");
 // abrerviados del DOM
 var cont = "#drop-cont";
 var partidos = "#partidos";
-var juegos = "#drop-game";
 var estadios = "#estadios";
+var comentarios = "#comentarios";
+
+var juegos = "#drop-game";
 
 // A la espera de cambios en la orientacion
 window.addEventListener("orientationchange", () => {
@@ -109,6 +111,38 @@ $("button").click(function () {
    mirarInfo("find-loc-nor", estadios, "#drop-nor"); //open nor
    mirarInfo("find-loc-sou", estadios, "#drop-sou"); //open sou
 
+   // Comentarios ***************************************************************************************
+   // septiembre
+   mirarMsj("msj-0914", comentarios); //open 9 u1 u4
+   mirarMsj("msj-0932", comentarios ); //open 932
+
+   mirarMsj("msj-0956", comentarios ); //open 956
+   mirarMsj("msj-0961", comentarios ); //open 961
+
+   mirarMsj("msj-0924", comentarios ); //open 924
+   mirarMsj("msj-0935", comentarios ); //open 935
+
+   mirarMsj("msj-0913", comentarios ); //open 913
+   mirarMsj("msj-0926", comentarios ); //open 926
+
+   mirarMsj("msj-0945", comentarios ); //open 945
+
+   // octubre
+   mirarMsj("msj-1025", comentarios ); //open 1025
+   mirarMsj("msj-1016", comentarios ); //open 1016
+
+   mirarMsj("msj-1034", comentarios ); //open 1034
+   mirarMsj("msj-1051", comentarios ); //open 1051
+
+   mirarMsj("msj-1063", comentarios ); //open 1063
+   mirarMsj("msj-1024", comentarios ); //open 1024
+
+   mirarMsj("msj-1031", comentarios ); //open 1031
+   mirarMsj("msj-1056", comentarios ); //open 1056
+
+
+
+
 
    // teams
    visualizar(nameclass, "find-team-u1", "#drop-u1", "toggle"); //open u1
@@ -168,6 +202,29 @@ function mirarInfo(clikeado, tipo, controlado) {
       $(tipo).collapse("show");
       $(juegos).collapse("show");
       $(controlado).collapse("show");
+   }
+}
+
+// mirar la informacion de Comentarios
+function mirarMsj(clikeado, tipo) {
+   let posicion = "";
+   let actualPart="";
+   if (orientacion == "landscape-primary") {
+      posicion = "show";
+   } else {
+      posicion = "hide";
+   }
+   if (nameclass.includes(clikeado)) {
+      // $(cont).collapse(posicion);
+      $(juegos).collapse("show");
+      $(tipo).collapse("show");
+      $("#post-games").collapse("show");
+      actualPart = nameclass.substr(nameclass.indexOf('msj-'), 8);
+      $("posts-"+actualPart).collapse("show");
+
+      console.log(actualPart);
+      ramaPost = actualPart;
+      startDatabaseQueries();
    }
 }
 // visualiza las paginas de la barra de nav

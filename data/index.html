@@ -338,6 +338,8 @@
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1049.9364645725686!2d-87.62962318831157!3d41.89997994915088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f6bac3%3A0x68a82e5d59952c86!2s24+W+Walton+St%2C+Chicago%2C+IL+60610%2C+USA!5e0!3m2!1sen!2sar!4v1553921561565!5m2!1sen!2sar">
                 </iframe>
               </div>
+
+              <button class="btn btn-success btn-block mb-2 find-msj-0914"> publications about the game</button>
             </div>
             <div class="collapse text-center btn-success" id="drop-932" data-parent="#partidos">
               <h5><a href="#" class="find-team-u3">U3</a> vs <a href="#" class="find-team-u2">U2</a></h5>
@@ -586,31 +588,19 @@
 
           </div>
 
-        </div>
-
-      </div>
-      <!-- informacion adicional -->
-      <div class="">
-        <div class="noVisible">
-          <button
-            class=" mdl-button mdl-js-button mdl-button--fab mdl-color--amber-400 mdl-shadow--4dp mdl-js-ripple-effect"
-            id="add">
-            <i class="material-icons">mode_edit</i>
-          </button>
-        </div>
-
-        <div class="" id="">
-          <div class="card bg-success text-center">
-              <button class="btn btn-block btn-success btn-lg" type="button" data-toggle="collapse" data-target="#post-games"
-                aria-expanded="true" aria-controls="post-games"> publications about the game
-              </button>
-
+          <!-- Comentarios -->
+          <div class="collapse" id="comentarios" data-parent="#drop-game">
+            publications about the game
             <div id="post-games" class="collapse">
+              <!--  -->
               <div class="logueado">
                 <!-- Card containing the inputs to add a new messages -->
                 <div class="container-fluid text-center ">
-                  <div class=" container-fluid card bg-success">
-                    <h2 class="">New Post</h2>
+                  <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#newPost"
+                    aria-expanded="false" aria-controls="newPost">
+                    New Post
+                  </button>
+                  <div class="collapse container-fluid card bg-success" id="newPost">
                     <form id="message-form" action="#">
                       <div class="form-group">
                         <label class="" for="new-post-title">Post title...</label>
@@ -626,23 +616,24 @@
                     </form>
                   </div>
                 </div>
-
-                <!-- Show a list of recent posts -->
-                <section class="content" id="recent-posts-list">
-                  <div class="posts">
-                    aaaaaaaaaaaaaaaaaaaa
-                  </div>
-                </section>
+                <!-- Show a list of  posts -->
+                <h4>List of posts</h4>
+                <div class="collapse show text-center" id="posts-msj-0914" data-parent="#post-games">
+                </div>
               </div>
+              <!--  -->
               <div class="noLogueado">
                 <h6>log in with google to see the game posts</h6>
               </div>
             </div>
           </div>
+
         </div>
 
+      </div>
 
-
+      <!-- informacion adicional -->
+      <div class="">
         <p class="announcement"><br>*All games take place on Saturday</p>
         <p><strong>Facility Type:</strong> Outdoor</p>
         <p><strong>Additional Information:</strong> If deemed necessary by NYSL, games may be shortened or cancelled
