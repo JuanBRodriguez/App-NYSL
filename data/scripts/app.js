@@ -45,11 +45,11 @@ $("button").click(function () {
    nameclass = this.className;
    console.log(nameclass);
 
-   if (orientacion == "landscape-primary") {
-      $(juegos).collapse('show'); //mantiene cualquier informacion anterior
-   } else {
-      $(juegos).collapse('hide'); //cierra cualquier informacion anterior
-   }
+   // if (orientacion == "landscape-primary") {
+   //    $(juegos).collapse('show'); //mantiene cualquier informacion anterior
+   // } else {
+   //    $(juegos).collapse('hide'); //cierra cualquier informacion anterior
+   // }
 
    // options info
    mirarCont("find-opt-cal", "#drop-cal"); //open calendar
@@ -215,7 +215,7 @@ function mirarMsj(clikeado, tipo) {
       posicion = "hide";
    }
    if (nameclass.includes(clikeado)) {
-      // $(cont).collapse(posicion);
+      $(cont).collapse(posicion);
       $(juegos).collapse("show");
       $(tipo).collapse("show");
       $("#post-games").collapse("show");
