@@ -330,17 +330,20 @@
           <div class="collapse" id="partidos" data-parent="#drop-game">
             <!-- septiembre -->
             <!-- 901 -->
-            <div class="collapse text-center btn-success" id="drop-914" data-parent="#partidos">
-              <h4><a href="#" class="find-team-u1">U1</a> vs <a href="#" class="find-team-u4">U4</a></h4>
-              <p>9:30 a.m. in <a href="#" class="find-loc-aj">AJ Katzenmaier</a></p>
-              <div class="embed-responsive embed-responsive-16by9">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1049.9364645725686!2d-87.62962318831157!3d41.89997994915088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f6bac3%3A0x68a82e5d59952c86!2s24+W+Walton+St%2C+Chicago%2C+IL+60610%2C+USA!5e0!3m2!1sen!2sar!4v1553921561565!5m2!1sen!2sar">
-                </iframe>
+            <div class="collapse text-center" id="drop-914" data-parent="#partidos">
+              <div class="btn-success">
+                <h4><a href="#" class="find-team-u1">U1</a> vs <a href="#" class="find-team-u4">U4</a></h4>
+                <p>9:30 a.m. in <a href="#" class="find-loc-aj">AJ Katzenmaier</a></p>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1049.9364645725686!2d-87.62962318831157!3d41.89997994915088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f6bac3%3A0x68a82e5d59952c86!2s24+W+Walton+St%2C+Chicago%2C+IL+60610%2C+USA!5e0!3m2!1sen!2sar!4v1553921561565!5m2!1sen!2sar">
+                  </iframe>
+                </div>
               </div>
 
-              <button class="btn btn-success btn-block mb-2 find-msj-0914"> publications about the game</button>
+              <button class="btn btn-success btn-block mb-2 find-msj-0914 mt-1"> Publications about the game</button>
             </div>
+
             <div class="collapse text-center btn-success" id="drop-932" data-parent="#partidos">
               <h5><a href="#" class="find-team-u3">U3</a> vs <a href="#" class="find-team-u2">U2</a></h5>
               <p>1:00 p.m. in <a href="#" class="find-loc-gre">Greenbay</a></p>
@@ -612,32 +615,31 @@
           </div>
 
           <!-- Comentarios -->
-          <div class="collapse" id="comentarios" data-parent="#drop-game">
-            publications about the game
+          <div class="collapse text-center " id="comentarios" data-parent="#drop-game">
+            <h3 class="m-0">Publications about the game </h3>
+
             <div id="post-games" class="collapse">
               <!--  -->
-              <div class="logueado">
+              <div class="logueado container-fluid text-center">
                 <!-- Card containing the inputs to add a new messages -->
-                <div class="container-fluid text-center ">
-                  <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#newPost"
-                    aria-expanded="false" aria-controls="newPost">
-                    New Post
-                  </button>
-                  <div class="collapse container-fluid card bg-success" id="newPost">
-                    <form id="message-form" action="#">
-                      <div class="form-group">
-                        <label class="" for="new-post-title">Post title...</label>
-                        <input class="form-control" type="text" id="new-post-title">
-                      </div>
-                      <div class="form-group">
-                        <label class="" for="new-post-message">Post message...</label>
-                        <textarea class="form-control" rows="3" id="new-post-message"></textarea>
-                      </div>
-                      <button type="submit" class="btn btn-success btn-block mt-2 mb-2 border border-dark">
-                        Add post
-                      </button>
-                    </form>
-                  </div>
+                <button class="btn btn-success btn-block" type="button" data-toggle="collapse" data-target="#newPost"
+                  aria-expanded="false" aria-controls="newPost">
+                  New Post
+                </button>
+                <div class="collapse container-fluid card bg-success" id="newPost">
+                  <form id="message-form" action="#">
+                    <div class="form-group">
+                      <label class="" for="new-post-title">Post title...</label>
+                      <input class="form-control" type="text" id="new-post-title">
+                    </div>
+                    <div class="form-group">
+                      <label class="" for="new-post-message">Post message...</label>
+                      <textarea class="form-control" rows="3" id="new-post-message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success btn-block mt-2 mb-2 border border-dark">
+                      Add post
+                    </button>
+                  </form>
                 </div>
                 <!-- Show a list of  posts -->
                 <h4>List of posts</h4>
@@ -690,6 +692,30 @@
 
       <!-- informacion adicional -->
       <div class="">
+
+        <div
+          class="post post-postId ">
+          <div class="">
+            <div class="">
+              <h4 class="mdl-card__title-text"> titulooo</h4>
+            </div>
+            <div class="header">
+              <div>
+                <div class="avatar"> holaaaa</div>
+                <div class="username mdl-color-text--black"> nombre de usuario</div>
+              </div>
+            </div>
+            <div class="text">textoooooooo</div>
+            <div class="comments-container"></div>
+            <form class="add-comment" action="#">
+              <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input new-comment" type="text">
+                <label class="mdl-textfield__label">Comment...</label>
+              </div>
+            </form>
+          </div>
+        </div>
+
         <p class="announcement"><br>*All games take place on Saturday</p>
         <p><strong>Facility Type:</strong> Outdoor</p>
         <p><strong>Additional Information:</strong> If deemed necessary by NYSL, games may be shortened or cancelled
