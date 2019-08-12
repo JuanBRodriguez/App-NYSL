@@ -24,8 +24,10 @@ window.addEventListener("orientationchange", () => {
    console.log(orientacion);
    if (orientacion == "landscape-primary") {
       console.log("horizontal");
+      $("#drop-cont").show();
    } else {
       console.log("vertical");
+      $("#drop-cont").hide();
    }
 });
 
@@ -56,23 +58,23 @@ $("button").click(function () {
    mirarCont("find-opt-tea", "#drop-tea"); //open teams
    mirarCont("find-opt-loc", "#drop-loc"); //open estadios
 
-
+   esconder("submit-newpost", "#newPost");
    //calendar
 
-   visualizar(nameclass, "find-mes-sep", "#drop-sep", "toggle"); //open september
+   visualizar("find-mes-sep", "#drop-sep" ); //open september
    // fechas septiembre
-   visualizar(nameclass, "find-fecha-901", "#drop-901", "toggle"); //open 901
-   visualizar(nameclass, "find-fecha-908", "#drop-908", "toggle"); //open 908
-   visualizar(nameclass, "find-fecha-915", "#drop-915", "toggle"); //open 915
-   visualizar(nameclass, "find-fecha-922", "#drop-922", "toggle"); //open 922
-   visualizar(nameclass, "find-fecha-929", "#drop-929", "toggle"); //open 929
+   visualizar("find-fecha-901", "#drop-901" ); //open 901
+   visualizar("find-fecha-908", "#drop-908" ); //open 908
+   visualizar("find-fecha-915", "#drop-915" ); //open 915
+   visualizar("find-fecha-922", "#drop-922" ); //open 922
+   visualizar("find-fecha-929", "#drop-929" ); //open 929
 
-   visualizar(nameclass, "find-mes-oct", "#drop-oct", "toggle"); //open october
+   visualizar("find-mes-oct", "#drop-oct" ); //open october
    // fechas octubre
-   visualizar(nameclass, "find-fecha-1006", "#drop-1006", "toggle"); //open 10/06
-   visualizar(nameclass, "find-fecha-1013", "#drop-1013", "toggle"); //open 10/13
-   visualizar(nameclass, "find-fecha-1020", "#drop-1020", "toggle"); //open 10/20
-   visualizar(nameclass, "find-fecha-1027", "#drop-1027", "toggle"); //open 10/27
+   visualizar("find-fecha-1006", "#drop-1006" ); //open 10/06
+   visualizar("find-fecha-1013", "#drop-1013" ); //open 10/13
+   visualizar("find-fecha-1020", "#drop-1020" ); //open 10/20
+   visualizar("find-fecha-1027", "#drop-1027" ); //open 10/27
 
    // Partidos ***************************************************************************************
    // septiembre
@@ -145,12 +147,12 @@ $("button").click(function () {
 
 
    // teams
-   visualizar(nameclass, "find-team-u1", "#drop-u1", "toggle"); //open u1
-   visualizar(nameclass, "find-team-u2", "#drop-u2", "toggle"); //open u2
-   visualizar(nameclass, "find-team-u3", "#drop-u3", "toggle"); //open u3
-   visualizar(nameclass, "find-team-u4", "#drop-u4", "toggle"); //open u4
-   visualizar(nameclass, "find-team-u5", "#drop-u5", "toggle"); //open u5
-   visualizar(nameclass, "find-team-u6", "#drop-u6", "toggle"); //open u6
+   visualizar("find-team-u1", "#drop-u1" ); //open u1
+   visualizar("find-team-u2", "#drop-u2" ); //open u2
+   visualizar("find-team-u3", "#drop-u3" ); //open u3
+   visualizar("find-team-u4", "#drop-u4" ); //open u4
+   visualizar("find-team-u5", "#drop-u5" ); //open u5
+   visualizar("find-team-u6", "#drop-u6" ); //open u6
 
 });
 
@@ -175,9 +177,14 @@ $("a").click(function () {
 
 // funciones************************************************************
 
-function visualizar(clases, buscado, controlado, accion) {
-   if (clases.includes(buscado)) {
-      $(controlado).collapse(accion);
+function visualizar(buscado, controlado) {
+   if (nameclass.includes(buscado)) {
+      $(controlado).collapse("toggle");
+   }
+}
+function esconder(buscado, controlado) {
+   if (nameclass.includes(buscado)) {
+      $(controlado).collapse("hide");
    }
 }
 

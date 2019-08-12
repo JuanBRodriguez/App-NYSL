@@ -40,27 +40,21 @@ function createPostElement(postId, title, text, author, authorId, authorPic) {
   console.log(postId, title, text, author, authorId, authorPic);
 
   var html =
-    '<div class="post post-' + postId + ' mdl-cell mdl-cell--12-col ' +
-    'mdl-cell--6-col-tablet mdl-cell--4-col-desktop mdl-grid mdl-grid--no-spacing">' +
-    '<div class="mdl-card mdl-shadow--2dp">' +
-    '<div class="mdl-card__title mdl-color--light-blue-600 mdl-color-text--white">' +
-    '<h4 class="mdl-card__title-text"></h4>' +
-    '</div>' +
-    '<div class="header">' +
-    '<div>' +
-    '<div class="avatar"></div>' +
-    '<div class="username mdl-color-text--black"></div>' +
-    '</div>' +
-    '</div>' +
-    '<div class="text"></div>' +
-    '<div class="comments-container"></div>' +
-    '<form class="add-comment" action="#">' +
-    '<div class="mdl-textfield mdl-js-textfield">' +
-    '<input class="mdl-textfield__input new-comment" type="text">' +
-    '<label class="mdl-textfield__label">Comment...</label>' +
-    '</div>' +
-    '</form>' +
-    '</div>' +
+    '<div class="post post-' + postId + ' card text-white bg-success mb-3 ">' +
+      '<div class="card-header row">' +
+        '<h4 class="card-title col m-0"></h4>' +
+        '<div class="username mt-2"></div>' +
+        '<img class="avatar "></img>' +
+      '</div>' +
+      '<div class="card-body text-justify">'+
+        '<div class="text card-text"></div>' +
+        '<div class="comments-container card-text list-group list-group-flush "></div>' +
+        '<form class="add-comment" action="#">' +
+        '<div class="mdl-textfield mdl-js-textfield">' +
+        '<input class="form-control new-comment" type="text" placeholder="Comment...">' +
+        '</div>' +
+        '</form>' +
+      '</div>' +
     '</div>';
 
   // Create the DOM element from the HTML.
@@ -76,10 +70,11 @@ function createPostElement(postId, title, text, author, authorId, authorPic) {
 
   // Set values.
   postElement.getElementsByClassName('text')[0].innerText = text;
-  postElement.getElementsByClassName('mdl-card__title-text')[0].innerText = title;
+  postElement.getElementsByClassName('card-title')[0].innerText = title;
   postElement.getElementsByClassName('username')[0].innerText = author || 'Anonymous';
   postElement.getElementsByClassName('avatar')[0].style.backgroundImage = 'url("' +
-    (authorPic || './silhouette.jpg') + '")';
+    (authorPic || 'img/person.svg') + '")';
+
 
   // Listen for comments.
   // [START child_event_listener_recycler]
@@ -127,8 +122,10 @@ function createNewComment(postId, username, uid, text) {
  */
 function addCommentElement(postElement, id, text, author) {
   var comment = document.createElement('div');
-  comment.classList.add('comment-' + id);
-  comment.innerHTML = '<span class="username"> </span> <span class="comment"> </span>';
+  comment.classList.add('comment-' + id +"list-group-item");
+  comment.classList.add("list-group-item");
+  comment.classList.add("bg-success");
+  comment.innerHTML = '<span class="username"></span>: <span class="comment"> </span>';
   comment.getElementsByClassName('comment')[0].innerText = text;
   comment.getElementsByClassName('username')[0].innerText = author || 'Anonymous';
 

@@ -5,15 +5,25 @@ body {
 }
 
 @media all and (orientation: portrait) {}
+
 @media all and (orientation: landscape) {}
 
 .material-icons.md-36 {
   font-size: 36px;
 }
 
-.noVisible{
+.noVisible {
   display: none;
 }
-.visible{
+
+.visible {
   display: block;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  background-image: url(../img/person.svg);
+  display: inline-block;
 }
